@@ -1,8 +1,4 @@
 .gitignore
-
+.prettierrc.json
 node_modules/
-
 test/
-.travis.yml
-
-gulpfile.js

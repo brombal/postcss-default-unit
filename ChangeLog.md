@@ -1,22 +1,15 @@
+## 2.0.0
+
+- Better detection of non-numeric values 
+- Removed logic around adding 's' or 'ms' units to 0s
+- Added ignore for stroke-opacity 
+- Added prettier for more standardized code format
+- Removed dependency on extend package
+- Removed eslint, gulp
+- Code simplification 
+
 ## 1.0.0
-* Bump major version
 
-## 0.0.6 — Deprecated
-* Update dependencies
-
-## 0.0.5
-* Update according to the plugin guidelines
-
-## 0.0.4
-* Fix recognizing alphanumerical colors.
-
-## 0.0.3
-* Fix for 0 with time units in FF.
-
-## 0.0.2
-* Now postcss-default-unit is able to process lines with expressions in parentheses (not including expressions yet)
-
-## 0.0.1
-* First version of a plugin
+- Forked from https://github.comantyakushev/postcss-default-unit
 
 Derived from [rework-default-unit](https://github.com/fgnass/rework-default-unit) v0.0.1
