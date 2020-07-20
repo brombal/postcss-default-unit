@@ -1,9 +1,5 @@
 # PostCSS Default Unit
 
-[![Build Status](https://travis-ci.org/antyakushev/postcss-default-unit.svg)][ci]
-[![NPM version](https://badge.fury.io/js/postcss-default-unit.svg)][npm]
-[![Dependency Status](https://gemnasium.com/antyakushev/postcss-default-unit.svg)][deps]
-
 [PostCSS] plugin that adds a default unit to numeric css properties.
 
 ```css
@@ -27,7 +23,7 @@
 With [npm] do:
 
 ```
-npm install postcss-default-unit --save
+npm install github:brombal/postcss-default-unit#main --save
 ```
 
 ## Usage
@@ -35,13 +31,23 @@ npm install postcss-default-unit --save
 By default `px` is used.
 
 ```js
-postcss([require('postcss-default-unit')]);
+const defaultUnit = require('postcss-default-unit');
+postcss([defaultUnit]);
 ```
 
-You can specify the desired unit.
+Or, with options:
 
 ```js
-postcss([require('postcss-default-unit')({ unit: '%' })]);
+const defaultUnit = require('postcss-default-unit');
+postcss([
+  defaultUnit({
+    unit: '%', // Default unit suffix
+    ignore: {
+      // Additional CSS properties to ignore
+      'other-property': true,
+    },
+  }),
+]);
 ```
 
 This plugin must be set after the plugins that can modify the values (e.g. [postcss-simple-vars]).
