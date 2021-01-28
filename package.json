@@ -1,6 +1,6 @@
 {
   "name": "postcss-default-unit",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "PostCSS plugin that adds a default unit to numeric css properties",
   "keywords": [
     "postcss",
@@ -20,7 +20,7 @@
     "url": "https://github.com/brombal/postcss-default-unit.git"
   },
   "peerDependencies": {
-    "postcss": "^5.0.0"
+    "postcss": "^8.0.0"
   },
   "devDependencies": {
     "chai": "3.2.0",

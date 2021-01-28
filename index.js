@@ -2,7 +2,7 @@ var postcss = require('postcss');
 
 var RULE_RE = /(height|width|resolution)\s*:\s*\d+\)/g;
 
-module.exports = postcss.plugin('postcss-default-unit', function (opts) {
+module.exports = function (opts) {
   opts = opts || {};
   opts.unit = opts.unit || 'px';
 
@@ -64,5 +64,10 @@ module.exports = postcss.plugin('postcss-default-unit', function (opts) {
     style.walkAtRules(transformRule);
   }
 
-  return defaultUnit;
-});
+  return {
+    postcssPlugin: 'postcss-default-unit',
+    Once: defaultUnit,
+  };
+};
+
+module.exports.postcss = true;
